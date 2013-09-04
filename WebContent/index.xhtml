@@ -10,32 +10,33 @@
 </h:head>
 
 <h:body>
-	<p:panel header="Negociações" footer="Argentum Web"> 
-		<h:outputText value="Olá JSF!" />
-	</p:panel>
-	
-	<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}">
+	<h:form>
+		<p:panel header="Negociações" footer="Argentum Web"> 
+			<h:outputText value="Olá JSF!" />
+		</p:panel>
 		
-		<p:column headerText="Preço">
-			<h:outputText value="#{negociacao.preco}" />
-		</p:column>
-	
-		<p:column headerText="Quantidade">
-			<h:outputText value="#{negociacao.quantidade}" />
-		</p:column>	
-	
-		<p:column headerText="Volume">
-			<h:outputText value="#{negociacao.volume}" />
-		</p:column>	
-	
-		<p:column headerText="Data">
-			<h:outputText value="#{negociacao.data.time}" >
-				<f:convertDateTime type="date"></f:convertDateTime>
-			</h:outputText>
-		</p:column>		
-	
-	</p:dataTable>	
-	
+		<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}" paginator="true" rows="15">
+			
+			<p:column headerText="Preço" sortBy="#{negociacao.preco}">
+				<h:outputText value="#{negociacao.preco}" />
+			</p:column>
+		
+			<p:column headerText="Quantidade" sortBy="#{negociacao.quantidade}">
+				<h:outputText value="#{negociacao.quantidade}" />
+			</p:column>	
+		
+			<p:column headerText="Volume" sortBy="#{negociacao.volume}">
+				<h:outputText value="#{negociacao.volume}" />
+			</p:column>	
+		
+			<p:column headerText="Data" sortBy="#{negociacao.preco}">
+				<h:outputText value="#{negociacao.data.time}" >
+					<f:convertDateTime type="date"></f:convertDateTime>
+				</h:outputText>
+			</p:column>		
+		
+		</p:dataTable>	
+	</h:form>
 </h:body>
 
 </html>
