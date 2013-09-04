@@ -17,23 +17,23 @@
 		
 		<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}" paginator="true" rows="15">
 			
-			<p:column headerText="Preço" sortBy="#{negociacao.preco}">
+			<p:column headerText="Preço" sortBy="#{negociacao.preco}" style="text-align:right;">
 				<h:outputText value="#{negociacao.preco}">
 					<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
 				</h:outputText>
 			</p:column>
 		
-			<p:column headerText="Quantidade" sortBy="#{negociacao.quantidade}">
+			<p:column headerText="Quantidade" sortBy="#{negociacao.quantidade}" style="text-align:right;">
 				<h:outputText value="#{negociacao.quantidade}" />
 			</p:column>	
 		
-			<p:column headerText="Volume" sortBy="#{negociacao.volume}">
+			<p:column headerText="Volume" sortBy="#{negociacao.volume}" style="text-align:right;">
 				<h:outputText value="#{negociacao.volume}">
 					<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
 				</h:outputText>
 			</p:column>	
 		
-			<p:column headerText="Data" sortBy="#{negociacao.preco}">
+			<p:column headerText="Data" sortBy="#{negociacao.preco}" style="text-align:center;">
 				<h:outputText value="#{negociacao.data.time}" >
 					<f:convertDateTime type="date"></f:convertDateTime>
 				</h:outputText>
