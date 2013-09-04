@@ -18,7 +18,9 @@
 		<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}" paginator="true" rows="15">
 			
 			<p:column headerText="Preço" sortBy="#{negociacao.preco}">
-				<h:outputText value="#{negociacao.preco}" />
+				<h:outputText value="#{negociacao.preco}">
+					<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
+				</h:outputText>
 			</p:column>
 		
 			<p:column headerText="Quantidade" sortBy="#{negociacao.quantidade}">
@@ -26,7 +28,9 @@
 			</p:column>	
 		
 			<p:column headerText="Volume" sortBy="#{negociacao.volume}">
-				<h:outputText value="#{negociacao.volume}" />
+				<h:outputText value="#{negociacao.volume}">
+					<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
+				</h:outputText>
 			</p:column>	
 		
 			<p:column headerText="Data" sortBy="#{negociacao.preco}">
