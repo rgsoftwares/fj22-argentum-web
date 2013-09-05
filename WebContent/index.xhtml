@@ -14,12 +14,27 @@
 		<p:growl />
 		<p:panel header="Dados do Gráfico"> 
 			<h:panelGrid columns="2">
-				<p:outputPanel for="titulo" value="Título: " />
+				<p:outputLabel for="titulo" value="Título: " />
 				<p:inputText id="titulo" value="#{argentumBean.titulo}" required="true">
 					<f:validateLength minimum="3" />
 				</p:inputText>
+				
+				<p:outputLabel for="indicador" value="Indicador: " />
+				<p:selectOneMenu id="indicador" value="#{argentumBean.nomeIndicador}">
+					<f:selectItem itemValue="IndicadorAbertura" itemLabel="Abertura" />
+					<f:selectItem itemValue="IndicadorFechamento" itemLabel="Fechamento" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel for="media" value="Média: " />
+				<p:selectOneMenu id="media" value="#{argentumBean.nomeMedia}">
+					<f:selectItem itemValue="" itemLabel="Escolhe um" />
+					<f:selectItem itemValue="MediaMovelSimples" itemLabel="Simples" />
+					<f:selectItem itemValue="MediaMovelPonderada" itemLabel="Ponderada" />
+				</p:selectOneMenu>			
+					
+				<h:commandLink actionListener="#{argentumBean.preparaDados}" value="Gerar Gráfico"></h:commandLink>
+				
 			</h:panelGrid>
-			<h:commandLink actionListener="#{argentumBean.preparaDados}" value="Gerar Gráfico"></h:commandLink>
 		</p:panel>
 		
 		<p:panel header="Negociações"> 
