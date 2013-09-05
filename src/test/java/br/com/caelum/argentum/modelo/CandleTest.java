@@ -8,7 +8,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-public class CandlestickFactoryTest {
+public class CandleTest {
 
 	@Test
 	public void sequenciaSimplesDeNegociacao() {
@@ -21,8 +21,8 @@ public class CandlestickFactoryTest {
 
 		List<Negociacao> negociacoes = Arrays.asList(negociacao1, negociacao2, negociacao3, negociacao4);
 
-		CandlestickFactory fabrica = new CandlestickFactory();
-		Candlestick candle = fabrica.constroiCandleParaData(hoje, negociacoes);
+		CandleFactory fabrica = new CandleFactory();
+		Candle candle = fabrica.constroiCandleParaData(hoje, negociacoes);
 
 		Assert.assertEquals(40.5, candle.getAbertura(), 0.00001);
 		Assert.assertEquals(42.3, candle.getFechamento(), 0.00001);
@@ -37,8 +37,8 @@ public class CandlestickFactoryTest {
 		
 		List<Negociacao> negociacoes = Arrays.asList(); 
 
-		CandlestickFactory fabrica = new CandlestickFactory();
-		Candlestick candle = fabrica.constroiCandleParaData(hoje, negociacoes);
+		CandleFactory fabrica = new CandleFactory();
+		Candle candle = fabrica.constroiCandleParaData(hoje, negociacoes);
 		
 		Assert.assertEquals(0.0, candle.getVolume(), 0.00001);
 	}
@@ -51,8 +51,8 @@ public class CandlestickFactoryTest {
 
 		List<Negociacao> negociacoes = Arrays.asList(negociacao);
 
-		CandlestickFactory fabrica = new CandlestickFactory();
-		Candlestick candle = fabrica.constroiCandleParaData(hoje, negociacoes);
+		CandleFactory fabrica = new CandleFactory();
+		Candle candle = fabrica.constroiCandleParaData(hoje, negociacoes);
 
 		Assert.assertEquals(40.5, candle.getAbertura(), 0.00001);
 		Assert.assertEquals(40.5, candle.getFechamento(), 0.00001);
@@ -86,9 +86,9 @@ public class CandlestickFactoryTest {
 			negociacao3, negociacao4, negociacao5, negociacao6, negociacao7, 
 			negociacao8);
 
-		CandlestickFactory fabrica = new CandlestickFactory();
+		CandleFactory fabrica = new CandleFactory();
 
-		List<Candlestick> candles = fabrica.constroiCandles(negociacoes);
+		List<Candle> candles = fabrica.constroiCandles(negociacoes);
 
 		Assert.assertEquals(3, candles.size());
 		Assert.assertEquals(40.5, candles.get(0).getAbertura(), 0.00001);

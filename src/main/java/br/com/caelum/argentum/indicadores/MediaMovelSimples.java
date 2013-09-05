@@ -1,6 +1,6 @@
 package br.com.caelum.argentum.indicadores;
 
-import br.com.caelum.argentum.modelo.Candlestick;
+import br.com.caelum.argentum.modelo.Candle;
 import br.com.caelum.argentum.modelo.SerieTemporal;
 
 public class MediaMovelSimples {
@@ -9,8 +9,7 @@ public class MediaMovelSimples {
 		
 		double soma = 0.0;
 		for ( int i = posicao - 2; i<=posicao; i++ ) {
-			Candlestick c = serie.getCandle(i);
-			soma += c.getFechamento();
+			soma += serie.getCandle(i).getFechamento();
 		}
 		
 		return soma / 3;
