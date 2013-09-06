@@ -33,7 +33,9 @@
 							<f:selectItem itemValue="MediaMovelPonderada" itemLabel="Ponderada" />
 						</p:selectOneMenu>			
 							
-						<h:commandLink actionListener="#{argentumBean.preparaDados}" value="Gerar Gráfico"></h:commandLink>
+						<h:commandLink actionListener="#{argentumBean.preparaDados}" 
+									   value="Gerar Gráfico"
+									   id="link"></h:commandLink>
 				</h:panelGrid>
 			</p:panel>
 		</h:form>
