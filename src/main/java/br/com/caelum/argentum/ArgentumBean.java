@@ -8,13 +8,13 @@ import javax.faces.bean.SessionScoped;
 import org.primefaces.model.chart.ChartModel;
 
 import br.com.caelum.argentum.factory.IndicadorFactory;
+import br.com.caelum.argentum.indicadores.IndicadorAbertura;
+import br.com.caelum.argentum.indicadores.IndicadorFechamento;
 import br.com.caelum.argentum.indicadores.MediaMovelPonderada;
 import br.com.caelum.argentum.indicadores.MediaMovelSimples;
 import br.com.caelum.argentum.modelo.Candle;
 import br.com.caelum.argentum.modelo.CandleFactory;
 import br.com.caelum.argentum.modelo.GeradorModeloGrafico;
-import br.com.caelum.argentum.modelo.IndicadorAbertura;
-import br.com.caelum.argentum.modelo.IndicadorFechamento;
 import br.com.caelum.argentum.modelo.Negociacao;
 import br.com.caelum.argentum.modelo.SerieTemporal;
 import br.com.caelum.argentum.ws.ClienteWebService;

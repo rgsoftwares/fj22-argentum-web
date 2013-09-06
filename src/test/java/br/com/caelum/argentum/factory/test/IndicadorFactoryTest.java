@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import br.com.caelum.argentum.factory.IndicadorFactory;
 import br.com.caelum.argentum.indicadores.Indicador;
-import br.com.caelum.argentum.modelo.IndicadorAbertura;
+import br.com.caelum.argentum.indicadores.IndicadorAbertura;
 
 public class IndicadorFactoryTest {
 
