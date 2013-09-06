@@ -5,7 +5,6 @@ import org.primefaces.model.chart.ChartModel;
 import org.primefaces.model.chart.LineChartSeries;
 
 import br.com.caelum.argentum.indicadores.Indicador;
-import br.com.caelum.argentum.indicadores.MediaMovelSimples;
 
 public class GeradorModeloGrafico {
 
